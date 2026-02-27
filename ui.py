@@ -1,8 +1,15 @@
 import streamlit as st
 import pandas as pd
+import io
+import sys
+
+if sys.stdout.encoding != 'utf-8':
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+if sys.stderr.encoding != 'utf-8':
+    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8')
+
 from core import TaskManager
 from config import MODEL_NAME
-import io
 
 st.set_page_config(page_title="AI Task Oracle", page_icon="🤖")
 
