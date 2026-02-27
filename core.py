@@ -12,6 +12,8 @@ class TaskManager:
         )
 
     def process_text(self, text):
+        print(f"--- [AI] Step 1 ---")
+
         # Draft Agent
         draft_prompt = ChatPromptTemplate.from_template("""
         SYSTEM: You are a Project Management AI.
@@ -19,6 +21,8 @@ class TaskManager:
         FORMAT: Return ONLY a JSON list of objects (task, assignee, deadline).
         TEXT: {context}
         """)
+        
+        print("--- [AI] Step 2: Draft extraction complete. Starting reflection... ---") 
 
         # Critic Agent
         review_prompt = ChatPromptTemplate.from_template("""
@@ -32,11 +36,10 @@ class TaskManager:
         3. Output ONLY the final JSON list.
         """)
 
-        print(f"--- [AI] Processing input text (Length: {len(text)} chars) ---")
+        print("--- [AI] Step 3: Final validation complete. ---")
         
         draft_result = (draft_prompt | self.llm).invoke({"context": text}).content
-        print("--- [AI] Draft extraction complete. Starting reflection... ---")
-        
+       
         final_result = (review_prompt | self.llm).invoke({
             "context": text,
             "draft": draft_result

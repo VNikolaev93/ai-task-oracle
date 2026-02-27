@@ -24,7 +24,8 @@ Extracting actionable tasks from messy meeting transcripts is a common business 
 - `ui.py`: Streamlit web interface logic.
 - `core.py`: Multi-agent LLM logic and prompts.
 - `config.py`: Environment configuration and model settings.
-- `meeting_notes.txt`: Example input for testing.
+- `meeting_notes_en.txt`: Example input for testing (en language).
+- `meeting_notes_ru.txt`: Example input for testing (ru language).
 
 ## 🔧 Installation & Setup
 1. Clone the repository: `git clone <your-repo-link>`
