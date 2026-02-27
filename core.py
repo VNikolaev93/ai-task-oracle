@@ -38,9 +38,12 @@ class TaskManager:
 
         print("--- [AI] Step 3: Final validation complete. ---")
         
-        draft_result = self.llm.invoke(draft_prompt.format(context=text)).content
+        draft_result = (draft_prompt | self.llm).invoke({"context": text}).content
        
-        final_result = self.llm.invoke(review_prompt.format(context=text, draft=draft_result)).content
+        final_result = (review_prompt | self.llm).invoke({
+            "context": text,
+            "draft": draft_result
+        }).content
         
         print("--- [AI] Final validation complete. ---")
         
