@@ -1,0 +1,19 @@
+MEETING NOTES - QA ENGLISH COURSE LAUNCH (Feb 26, 2026)
+
+Participants: Hank (Lead), Helen (Marketing), Jacob (Dev), Polly (Product).
+
+1. LENDING PAGE
+Helen mentioned the design is 80% ready. However, we need to update all screenshots to the latest build by next Friday. 
+Hank promised to prepare these screenshots within 3 days from the test environment.
+
+2. TECHNICAL & PAYMENTS
+Jacob reported that the payment gateway integration needs load testing. Deadline: March 5, 2026. 
+Jacob also asked Helen to send a list of emails for test accounts by Monday.
+
+3. OFFICE & MISC
+Polly planned to order pizza tomorrow for the team. 
+Helen also asked Polly to bring 1 plunger to the office no later than March 7 because of the plumbing issues.
+
+4. NEXT STEPS
+The next meeting is scheduled for March 10. 
+Helen will handle the room booking ("London" room).
